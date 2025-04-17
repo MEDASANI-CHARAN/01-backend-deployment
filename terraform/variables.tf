@@ -20,6 +20,6 @@ variable zone_name {
   default = "daws2025.online"
 }
 
-variable "appVersion" {
+variable "app_version" {
   
 }
