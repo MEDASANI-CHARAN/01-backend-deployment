@@ -31,22 +31,22 @@ pipeline {
                """
             }
           }
-          stage('Plan'){
-            steps {
-               sh """
-                    cd terraform
-                    terraform plan -var="app_version=${params.appVersion}"
-               """
-            }
-          }
-          stage('Deploy'){
-             steps {
-               sh """
-                    cd terraform
-                    terraform destroy -auto-approve -var="app_version=${params.appVersion}"
-                """
-             }
-           }
+        //   stage('Plan'){
+        //     steps {
+        //        sh """
+        //             cd terraform
+        //             terraform plan -var="app_version=${params.appVersion}"
+        //        """
+        //     }
+        //   }
+        //   stage('Deploy'){
+        //      steps {
+        //        sh """
+        //             cd terraform
+        //             terraform destroy -auto-approve -var="app_version=${params.appVersion}"
+        //         """
+        //      }
+        //    }
         }
     post {  
             always { 
