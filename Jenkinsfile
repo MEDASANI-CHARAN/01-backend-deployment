@@ -43,7 +43,7 @@ pipeline {
              steps {
                sh """
                     cd 07-backend
-                    terraform apply -auto-approve -var="app_version=${params.appVersion}"
+                    terraform destroy -auto-approve -var="app_version=${params.appVersion}"
                 """
              }
            }
@@ -54,10 +54,10 @@ pipeline {
                 deleteDir()
             }
             success { 
-                echo 'I will run when pipeline sucess'
+                echo 'I will run when pipeline success'
             }
             failure { 
                 echo 'I will run when pipeline failure'
             }
-        } 
+        }
 }
