@@ -46,7 +46,7 @@ pipeline {
                     terraform destroy -auto-approve -var="app_version=${params.appVersion}"
                 """
              }
-           }
+           } 
         }
     post {  
             always { 
