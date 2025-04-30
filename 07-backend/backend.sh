@@ -1,7 +1,5 @@
 #!/bin/bash
-component=$1
-environment=$2
-app_Version=$3
+app_Version=$1
 dnf install ansible -y
 pip3.9 install botocore boto3
-ansible-pull -i localhost, -U https://github.com/MEDASANI-CHARAN/04-expense-ansible-roles.tf.git backend.yaml -e appVersion=$app_Version
+ansible-pull -i localhost, -U https://github.com/MEDASANI-CHARAN/03-expense-ansible-roles.git backend.yaml -e appVersion=$app_Version
